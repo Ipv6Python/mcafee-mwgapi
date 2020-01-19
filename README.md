@@ -40,6 +40,15 @@ print(publichostvalidation.lookup(data=test.setup()))
 # Contribution:
 This is an Open Source Project, Contributions are welcome. 
 
-#License: 
+# License: 
 MIT License
+
+
+# Credits:
+
+This application uses Open Source components. You can find the source code of their open source projects along with license information below. We acknowledge and are grateful to these developers for their contributions to open source.
+
+Project: https://github.com/KateLibC/McAfeeWebGateway
+Copyright (c) 2017 Cariad Keigher (KateLibC) 
+License (GPL-2.0)(GNU General Public License v2.0) https://github.com/KateLibC/McAfeeWebGateway/blob/master/LICENCE.md
 __
