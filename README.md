@@ -9,6 +9,9 @@ Package is written in reference of MWG Version 8.2.
 # Usage:  
 
 ~~~~
+
+pip install mcafee-mwgapi
+
 from webgatewayapi.authenticate import authenticate
 
 MWG_SERVER = input("Enter MWG Server")
