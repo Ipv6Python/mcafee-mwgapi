@@ -1,6 +1,6 @@
-from apifiles.authenticate import authenticate
-from apifiles.parse import parseData
-from apifiles.process import process
+from webgatewayapi.authenticate import authenticate
+from webgatewayapi.parse import parseData
+from webgatewayapi.process import process
 
 class listdata(object):
     """
@@ -61,29 +61,21 @@ class listdata(object):
         :param position: List Entry Position.
         :return: Status response of the post.
         """
+        i = '''<entry xmlns="http://www.w3org/2011/Atom">
+                    <content type="application/xml">
+                        <listEntry>
+                            <entry>{}</entry>
+                            <description>{}</description>
+                        </listEntry>
+                    </content> 
+                </entry>'''
         if insert == "insert":
             u = self.listURL(value=value, entry=position, insert=insert)
-            i = '''<entry xmlns="http://www.w3org/2011/Atom">
-                        <content type="application/xml">
-                            <listEntry>
-                                <entry>{}</entry>
-                                <description>{}</description>
-                            </listEntry>
-                        </content> 
-                    </entry>'''
             i = i.format(entry, description)
             r = self.auth.post(u, data=i, headers={'Content-Type': 'application/xml'})
             return parseData(r.text)
         else:
             u = self.listURL(value=value, entry=position)
-            i = '''<entry xmlns="http://www.w3org/2011/Atom">
-                                    <content type="application/xml">
-                                        <listEntry>
-                                            <entry>{}</entry>
-                                            <description>{}</description>
-                                        </listEntry>
-                                    </content> 
-                                </entry>'''
             i = i.format(entry, description)
             r = self.auth.put(u, data=i, headers={'Content-Type': 'application/xml'})
             return parseData(r.text)

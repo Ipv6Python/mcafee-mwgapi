@@ -6,8 +6,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="mcafee-mwgapi", # Replace with your own username
-    version="0.1",
-    author="Ram Davuluri",
+    version="0.3",
+    author="Ipv6Python",
     author_email="ramipv6@gmail.com",
     description="Mcafee Web Gateway API functionality",
     long_description=long_description,

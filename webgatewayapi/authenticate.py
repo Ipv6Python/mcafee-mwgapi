@@ -2,6 +2,7 @@ import requests
 
 
 class authenticate(object):
+
     """
         Authenticate Class Object will provide user authentication based on the Username and Password, Api operations
         related to the authentication should be extended in this class.
@@ -9,15 +10,12 @@ class authenticate(object):
         This Class is initialized with hostname and defaults to McAfee API Port.
     """
 
-    def __init__(self, hostname, port=4712, https=True):
+    def __init__(self, hostname, port, https=True):
         self.session = None
         self.target = None
         self.hostname = hostname
         self.port = port
         self.https = https
-
-
-
 
 
     def createSession(self, username, password):
@@ -37,7 +35,6 @@ class authenticate(object):
             print("Authentication Error. Try Again Later..")
             raise Exception(gen.text)
         return gen.cookies
-
 
 
     def destroySession(self):

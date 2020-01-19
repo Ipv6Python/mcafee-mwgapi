@@ -1,4 +1,4 @@
-from apifiles.tools import mergeDict
+from webgatewayapi.tools import mergeDict
 from collections import OrderedDict
 
 import urllib.parse
@@ -71,7 +71,7 @@ class process(object):
         out['type'] = d['type']
         out['listType'] = d['listType']
         if d['content']['list']['content'] is None:
-                return d['title'],"There are no list Entries In this category"
+                return d['title']
 
         elif isinstance(d['content']['list']['content']['listEntry'], OrderedDict):
                 e = d['content']['list']['content']['listEntry']["entry"]

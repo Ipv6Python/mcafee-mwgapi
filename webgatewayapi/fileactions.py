@@ -1,4 +1,4 @@
-from apifiles.authenticate import authenticate
+from webgatewayapi.authenticate import authenticate
 
 
 class fileactions(object):
@@ -77,9 +77,4 @@ class fileactions(object):
         _response = self.auth.get(_url, headers={'Accept': 'application/x-download'})
         return _response.text
 
-    def deletelogfile(self):
-        """
-        This function deletes a log file
-        :return: status of log file deletion
-        """
 

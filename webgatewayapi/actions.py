@@ -1,4 +1,4 @@
-from apifiles.authenticate import authenticate
+from webgatewayapi.authenticate import authenticate
 
 
 
@@ -15,7 +15,7 @@ class actions(object):
 
     """
 
-    def __init__(self, auth, hostname, port=4712, https=True):
+    def __init__(self, auth, hostname, port, https=True):
         self.auth = auth
         self.hostname = hostname
         self.port = port
