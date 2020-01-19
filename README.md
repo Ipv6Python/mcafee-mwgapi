@@ -1,6 +1,6 @@
-# Overview: 
+# McAfee WebGateway API Overview: 
 
-This is an open source project to help developers working on the McAfee Web Gateway product, 
+This is an open source project to help developers working on the McAfee Web Gateway REST API interface, 
 Since McAFee lacks a pre-developed code package. 
 Package is written in reference of MWG Version 8.2. 
 
