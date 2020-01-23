@@ -41,7 +41,7 @@ print(publichostvalidation.lookup(data=test.setup()))
 This is an Open Source Project, Contributions are welcome. 
 
 # License: 
-MIT License
+GPL License
 
 
 # Credits:
